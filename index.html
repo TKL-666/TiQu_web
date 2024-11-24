@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片主色调提取</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>图片主色调提取</h1>
+        <p>上传一张图片，提取其主色调，并显示每个主色调的十六进制编码</p>
+        
+        <div class="input-section">
+            <input type="file" id="imageInput" accept="image/*">
+            <div class="slider-container">
+                <label for="colorCount">选择提取的主色调数量：</label>
+                <input type="range" id="colorCount" min="1" max="10" value="5" step="1">
+                <span id="colorCountValue">5</span>
+            </div>
+        </div>
+
+        <div class="preview-section">
+            <div class="image-preview">
+                <h3>预览图片</h3>
+                <img id="previewImage" src="#" alt="预览图片">
+            </div>
+            
+            <div class="colors-section">
+                <h3>主色调</h3>
+                <div id="colorPalette" class="color-palette"></div>
+                <div id="hexCodes" class="hex-codes"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
